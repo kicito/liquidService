@@ -1,4 +1,4 @@
-from liquid.main import Liquid
+from ..main import Liquid
 from console import Console
 
 service main(){
@@ -24,8 +24,8 @@ service main(){
       language = "Italian"
     }
     renderDocument@Liquid({ 
-      data << data, 
-      template = template, 
+      data << data,
+      template = template,
       format = "jolie" 
       })( s )
     println@Console( s )()

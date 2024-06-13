@@ -1,0 +1,27 @@
+{
+  "name": "@jolie/liquid",
+  "version": "1.0.0",
+  "description": "A wrapper for the Liqp Liquid template engine",
+  "repo": "",
+  "author": "Saverio Giallorenzo",
+  "contributors": [
+    "nau"
+  ],
+  "license": "LGPL 2.1",
+  "keywords": [
+    "microservices",
+    "jolie",
+    "templates",
+    "Liquid"
+  ],
+  "scripts": {
+    "postinstall": "npx @jolie/jpm install"
+  },
+  "jolie": {
+    "dependencies": {},
+    "maven": {
+      "dependencies": {},
+      "indirectDependencies": {}
+    }
+  }
+}

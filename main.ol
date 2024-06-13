@@ -1,5 +1,6 @@
 /************************************************************************************
  *   Copyright (C) 2019-2021 by Saverio Giallorenzo <saverio.giallorenzo@gmail.com> *
+ *   Copyright (C) 2024-2024 by Narongrit Unwerawattana <narongrit.kie@gmail.com>   *
  *                                                                                  *
  *   This program is free software; you can redistribute it and/or modify           *
  *   it under the terms of the GNU Library General Public License as                *
@@ -36,13 +37,15 @@ interface LiquidInterface {
     loadTemplate( LoadRequest )( void )
 }
 
-service Liquid() {
-  inputPort IP {
-    location: "local"
-    interfaces: LiquidInterface
-  }  
+service Liquid {
 
-  foreign java {
-    class: "joliex.liquid.LiquidService"
-  }
+    inputPort IP {
+        location: "local"
+        interfaces: LiquidInterface
+    }
+
+	foreign java{
+		class: "joliex.liquidservice.LiquidService"
+	}
+
 }
