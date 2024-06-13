@@ -15,7 +15,12 @@
     "Liquid"
   ],
   "scripts": {
-    "postinstall": "npx @jolie/jpm install"
+    "prepack": "npx --package=@jolie/jpm -- jpm hooks:prepack",
+    "postinstall": "npx @jolie/jpm install",
+    "postpublish": "shx rm -rf dist"
+  },
+  "devDependencies": {
+    "shx": "^0.3.4"
   },
   "jolie": {
     "dependencies": {},
